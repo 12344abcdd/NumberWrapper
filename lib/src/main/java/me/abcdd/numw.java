@@ -1,14 +1,20 @@
 package me.abcdd;
 
 public class numw extends Number {
+    int int_value;
+    
     public numw() {
     
     }
     
     
+    public void setValue(int int_value){
+        this.int_value=int_value;
+    }
+    
     public int intValue(){
     
-        return 0;
+        return int_value;
     }
 
 
