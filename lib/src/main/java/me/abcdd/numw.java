@@ -1,20 +1,36 @@
 package me.abcdd;
 
 public class numw extends Number {
+    types type;
     int int_value;
     
     public numw() {
-    
     }
     
+    
+    public String getType(){
+        return type.toString();
+    }
+    public void setType(types type){
+        this.type=type;
+    }
     
     public void setValue(int int_value){
         this.int_value=int_value;
+        type=types.INT;
+    }
+    
+    public int toInt(){
+        switch (type){
+            case types.INT:
+                return int_value;
+            default:
+                return int_value;
+        }
     }
     
     public int intValue(){
-    
-        return int_value;
+        return type==types.INT ? int_value : toInt();
     }
 
 
