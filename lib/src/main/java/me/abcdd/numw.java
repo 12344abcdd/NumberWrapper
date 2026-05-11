@@ -1,0 +1,7 @@
+package me.abcdd;
+
+public class numw {
+    public numw{
+    }
+    
+}
