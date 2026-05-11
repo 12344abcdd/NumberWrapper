@@ -23,6 +23,7 @@
 hs_err_pid*
 replay_pid*
 
+*.bak
 
 # Ignore Gradle project-specific cache directory
 .gradle
