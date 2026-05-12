@@ -1,15 +1,21 @@
 package me.abcdd;
 
 public class numw extends Number {
-    types type;
+    private types type;
+    byte byte_value;
+    short short_value;
     int int_value;
+    long long_value;
+    float float_value;
+    double double_value;
+    
     
     public numw() {
     }
     
     
-    public String getType(){
-        return type.toString();
+    public types getType(){
+        return type;
     }
     public void setType(types type){
         this.type=type;
