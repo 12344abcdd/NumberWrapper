@@ -11,6 +11,7 @@ public class numw extends Number {
     float float_value;
     double double_value;
     BigInteger BigInteger_value;
+    BigDecimal BigDecimal_value;
     
     public numw() {
     }
@@ -29,16 +30,19 @@ public class numw extends Number {
     }
     
     public int toInt(){
+    
+    
+    }
+    
+    public int intValue(){
         switch (type){
+            case types.BYTE:
+                return (int)byte_value;
             case types.INT:
                 return int_value;
             default:
                 return int_value;
-        }
-    }
-    
-    public int intValue(){
-        return type==types.INT ? int_value : toInt();
+            }
     }
 
 
