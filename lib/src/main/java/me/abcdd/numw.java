@@ -1,5 +1,7 @@
 package me.abcdd;
 
+import java.math.*;
+
 public class numw extends Number {
     private types type;
     byte byte_value;
@@ -8,7 +10,7 @@ public class numw extends Number {
     long long_value;
     float float_value;
     double double_value;
-    
+    BigInteger BigInteger_value;
     
     public numw() {
     }
