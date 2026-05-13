@@ -44,6 +44,10 @@ public class numw extends Number {
                 return int_value;
             case types.LONG:
                 return (int)long_value;
+            case types.BIGINTEGER:
+                return BigInteger_value.intValue();
+            case types.BIGDECIMAL:
+                return BigDecimal_value.intValue();
             default:
                 return int_value;
             }
