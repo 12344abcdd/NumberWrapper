@@ -44,6 +44,10 @@ public class numw extends Number {
                 return int_value;
             case types.LONG:
                 return (int)long_value;
+            case types.FLOAT:
+                return (int)float_value;
+            case types.DOUBLE:
+                return (int)double_value;
             case types.BIGINTEGER:
                 return BigInteger_value.intValue();
             case types.BIGDECIMAL:
@@ -55,13 +59,42 @@ public class numw extends Number {
 
 
     public long longValue(){
-    
-        return 0L;
+        switch (type){
+            case types.BYTE:
+                return (long)byte_value;
+            case types.SHORT:
+                return (long)short_value;
+            case types.INT:
+                return (long)long_value;
+            case types.LONG:
+                return long_value;
+            case types.BIGINTEGER:
+                return BigInteger_value.longValue();
+            case types.BIGDECIMAL:
+                return BigDecimal_value.longValue();
+            default:
+                return long_value;
+            }
     }
 
 
     public float floatValue(){
-        return (float)doubleValue();
+   switch (type){
+            case types.BYTE:
+                return (float)byte_value;
+            case types.SHORT:
+                return (float)short_value;
+            case types.INT:
+                return (float)int_value;
+            case types.LONG:
+                return (float)long_value;
+            case types.BIGINTEGER:
+                return BigInteger_value.floatValue();
+            case types.BIGDECIMAL:
+                return BigDecimal_value.floatValue();
+            default:
+                return float_value;
+            }
     }
 
 
