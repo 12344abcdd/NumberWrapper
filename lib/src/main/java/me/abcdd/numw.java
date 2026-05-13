@@ -181,13 +181,13 @@ public class numw extends Number {
     
     public BigInteger BigIntegerValue(){
     switch (type){
-            /*case types.BYTE:
-                return new BigInteger(byte_value.toString());
+            case types.BYTE:
+                return new BigInteger(Byte.valueOf(byte_value).toString());
             case types.SHORT:
-                return new BigInteger(short_value.toString());
+                return new BigInteger(Short.valueOf(short_value).toString());
             case types.INT:
-                return (float)int_value;
-            case types.LONG:
+                return new BigInteger(Integer.valueOf(int_value).toString());
+          /*  case types.LONG:
                 return (float)long_value;
             case types.FLOAT:
                 return float_value;
@@ -198,7 +198,7 @@ public class numw extends Number {
             case types.BIGDECIMAL:
                 return BigDecimal_value.floatValue();*/
             default:
-                return new BigInteger(new Float(float_value).toString());
+                return BigInteger_value;
             }
     }
 }
