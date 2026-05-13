@@ -38,7 +38,7 @@ public class numw extends Number {
     public byte byteValue() {
         switch (type){
             case types.BYTE:
-                return (byte)byte_value;
+                return byte_value;
             case types.SHORT:
                 return (byte)short_value;
             case types.INT:
@@ -60,7 +60,26 @@ public class numw extends Number {
 
 
     public short shortValue() {
-        return (short)intValue();
+        switch (type){
+            case types.BYTE:
+                return (short)byte_value;
+            case types.SHORT:
+                return short_value;
+            case types.INT:
+                return (short)int_value;
+            case types.LONG:
+                return (short)long_value;
+            case types.FLOAT:
+                return (short)float_value;
+            case types.DOUBLE:
+                return (short)double_value;
+            case types.BIGINTEGER:
+                return BigInteger_value.shortValue();
+            case types.BIGDECIMAL:
+                return BigDecimal_value.shortValue();
+            default:
+                return short_value;
+            }
     }
     
     
