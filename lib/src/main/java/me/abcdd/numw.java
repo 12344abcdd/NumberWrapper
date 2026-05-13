@@ -33,6 +33,36 @@ public class numw extends Number {
     
     return 0;
     }
+    //返回对应类型值
+    
+    public byte byteValue() {
+        switch (type){
+            case types.BYTE:
+                return (byte)byte_value;
+            case types.SHORT:
+                return (byte)short_value;
+            case types.INT:
+                return (byte)int_value;
+            case types.LONG:
+                return (byte)long_value;
+            case types.FLOAT:
+                return (byte)float_value;
+            case types.DOUBLE:
+                return (byte)double_value;
+            case types.BIGINTEGER:
+                return BigInteger_value.byteValue();
+            case types.BIGDECIMAL:
+                return BigDecimal_value.byteValue();
+            default:
+                return byte_value;
+            }
+    }
+
+
+    public short shortValue() {
+        return (short)intValue();
+    }
+    
     
     public int intValue(){
         switch (type){
@@ -68,6 +98,10 @@ public class numw extends Number {
                 return (long)long_value;
             case types.LONG:
                 return long_value;
+            case types.FLOAT:
+                return (long)float_value;
+            case types.DOUBLE:
+                return (long)double_value;
             case types.BIGINTEGER:
                 return BigInteger_value.longValue();
             case types.BIGDECIMAL:
@@ -79,7 +113,7 @@ public class numw extends Number {
 
 
     public float floatValue(){
-   switch (type){
+        switch (type){
             case types.BYTE:
                 return (float)byte_value;
             case types.SHORT:
@@ -88,6 +122,10 @@ public class numw extends Number {
                 return (float)int_value;
             case types.LONG:
                 return (float)long_value;
+            case types.FLOAT:
+                return float_value;
+            case types.DOUBLE:
+                return (float)double_value;
             case types.BIGINTEGER:
                 return BigInteger_value.floatValue();
             case types.BIGDECIMAL:
@@ -99,16 +137,25 @@ public class numw extends Number {
 
 
     public double doubleValue(){
-        return 0.0;
-    }
-
-
-    public byte byteValue() {
-        return (byte)intValue();
-    }
-
-
-    public short shortValue() {
-        return (short)intValue();
+        switch (type){
+            case types.BYTE:
+                return (double)byte_value;
+            case types.SHORT:
+                return (double)short_value;
+            case types.INT:
+                return (double)int_value;
+            case types.LONG:
+                return (double)long_value;
+            case types.FLOAT:
+                return double_value;
+            case types.DOUBLE:
+                return double_value;
+            case types.BIGINTEGER:
+                return BigInteger_value.doubleValue();
+            case types.BIGDECIMAL:
+                return BigDecimal_value.doubleValue();
+            default:
+                return double_value;
+            }
     }
 }
