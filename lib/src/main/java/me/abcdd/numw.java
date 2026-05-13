@@ -20,6 +20,7 @@ public class numw extends Number {
     public types getType(){
         return type;
     }
+    
     public void setType(types type){
         this.type=type;
     }
@@ -29,10 +30,7 @@ public class numw extends Number {
         type=types.INT;
     }
     
-    public int toInt(){
     
-    return 0;
-    }
     //返回对应类型值
     
     public byte byteValue() {
