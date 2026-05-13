@@ -178,7 +178,7 @@ public class numw extends Number {
             }
     }
     
-    
+    //big类，使用工厂方法
     public BigInteger BigIntegerValue(){
         switch (type){
             case types.BYTE:
@@ -201,4 +201,28 @@ public class numw extends Number {
                 return BigInteger_value;
             }
     }
+    
+    
+    public BigDecimal BigDecimalValue(){
+        switch (type){
+            case types.BYTE:
+                return new BigDecimal(Byte.valueOf(byte_value).toString());
+            case types.SHORT:
+                return new BigDecimal(Short.valueOf(short_value).toString());
+            case types.INT:
+                return new BigDecimal(Integer.valueOf(int_value).toString());
+            case types.LONG:
+                return new BigDecimal(Long.valueOf(long_value).toString());
+            case types.FLOAT:
+                return new BigDecimal(Float.valueOf(float_value).toString());
+            case types.DOUBLE:
+                return new BigDecimal(Double.valueOf(double_value).toString());
+            case types.BIGINTEGER:
+                return new BigDecimal(BigInteger_value.toString());
+            case types.BIGDECIMAL:
+                return BigDecimal_value;
+            default:
+                return BigDecimal_value;
+            }
+    }   
 }
