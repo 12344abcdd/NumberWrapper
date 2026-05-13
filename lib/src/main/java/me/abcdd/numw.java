@@ -177,4 +177,28 @@ public class numw extends Number {
                 return double_value;
             }
     }
+    
+    
+    public BigInteger BigIntegerValue(){
+    switch (type){
+            /*case types.BYTE:
+                return new BigInteger(byte_value.toString());
+            case types.SHORT:
+                return new BigInteger(short_value.toString());
+            case types.INT:
+                return (float)int_value;
+            case types.LONG:
+                return (float)long_value;
+            case types.FLOAT:
+                return float_value;
+            case types.DOUBLE:
+                return (float)double_value;
+            case types.BIGINTEGER:
+                return BigInteger_value.floatValue();
+            case types.BIGDECIMAL:
+                return BigDecimal_value.floatValue();*/
+            default:
+                return new BigInteger(new Float(float_value).toString());
+            }
+    }
 }
