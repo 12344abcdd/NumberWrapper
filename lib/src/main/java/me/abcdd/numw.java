@@ -31,15 +31,19 @@ public class numw extends Number {
     
     public int toInt(){
     
-    
+    return 0;
     }
     
     public int intValue(){
         switch (type){
             case types.BYTE:
                 return (int)byte_value;
+            case types.SHORT:
+                return (int)short_value;
             case types.INT:
                 return int_value;
+            case types.LONG:
+                return (int)long_value;
             default:
                 return int_value;
             }
