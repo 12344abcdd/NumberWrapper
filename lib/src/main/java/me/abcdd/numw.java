@@ -180,23 +180,23 @@ public class numw extends Number {
     
     
     public BigInteger BigIntegerValue(){
-    switch (type){
+        switch (type){
             case types.BYTE:
                 return new BigInteger(Byte.valueOf(byte_value).toString());
             case types.SHORT:
                 return new BigInteger(Short.valueOf(short_value).toString());
             case types.INT:
                 return new BigInteger(Integer.valueOf(int_value).toString());
-          /*  case types.LONG:
-                return (float)long_value;
+            case types.LONG:
+                return new BigInteger(Long.valueOf(long_value).toString());
             case types.FLOAT:
-                return float_value;
+                return new BigInteger(Float.valueOf(float_value).toString());
             case types.DOUBLE:
-                return (float)double_value;
+                return new BigInteger(Double.valueOf(double_value).toString());
             case types.BIGINTEGER:
-                return BigInteger_value.floatValue();
+                return BigInteger_value;
             case types.BIGDECIMAL:
-                return BigDecimal_value.floatValue();*/
+                return new BigInteger(BigDecimal_value.toString());
             default:
                 return BigInteger_value;
             }
