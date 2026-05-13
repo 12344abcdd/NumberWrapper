@@ -25,9 +25,43 @@ public class numw extends Number {
         this.type=type;
     }
     
+    
+    
+    //设置对应类型值
+    
+    public void setValue(byte byte_value){
+        this.byte_value=byte_value;
+        type=types.BYTE;
+    }
+    
+    
+    public void setValue(short short_value){
+        this.short_value=short_value;
+        type=types.SHORT;
+    }
+    
+    
     public void setValue(int int_value){
         this.int_value=int_value;
         type=types.INT;
+    }
+    
+    
+    public void setValue(long long_value){
+        this.long_value=long_value;
+        type=types.LONG;
+    }
+    
+    
+    public void setValue(float float_value){
+        this.float_value=float_value;
+        type=types.FLOAT;
+    }
+    
+    
+    public void setValue(double double_value){
+        this.double_value=double_value;
+        type=types.DOUBLE;
     }
     
     
