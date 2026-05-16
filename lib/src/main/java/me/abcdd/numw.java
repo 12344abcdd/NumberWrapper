@@ -22,12 +22,17 @@ public class numw extends Number {
     }
     
     public void setType(types type){
+        if(this.type!=type){
         this.type=type;
+        
+        }
     }
     
     
     
     //设置对应类型值
+    
+    
     
     public void setValue(byte byte_value){
         this.byte_value=byte_value;
@@ -65,9 +70,45 @@ public class numw extends Number {
     }
     
     
+    public void setValue(BigInteger BigInteger_value){
+        this.BigInteger_value=BigInteger_value;
+        type=types.BIGINTEGER;
+    }
+    
+    
+    public void setValue(BigDecimal BigDecimal_value){
+        this.BigDecimal_value=BigDecimal_value;
+        type=types.BIGDECIMAL;
+    }
+    
+    
     //返回对应类型值
     
-    public byte byteValue() {
+    public String toString(){
+        switch (type){
+            case types.BYTE:
+                return Byte.valueOf(byte_value).toString();
+            case types.SHORT:
+                return Short.valueOf(short_value).toString();
+            case types.INT:
+                return Integer.valueOf(int_value).toString();
+            case types.LONG:
+                return Long.valueOf(long_value).toString();
+            case types.FLOAT:
+                return Float.valueOf(float_value).toString();
+            case types.DOUBLE:
+                return Double.valueOf(double_value).toString();
+            case types.BIGINTEGER:
+                return BigInteger_value.toString();
+            case types.BIGDECIMAL:
+                return BigDecimal_value.toString();
+            default:
+                throw new RuntimeException("can't get type"+type.toString());
+            }
+    }
+   
+   
+    public byte byteValue() throws RuntimeException{
         switch (type){
             case types.BYTE:
                 return byte_value;
@@ -86,7 +127,7 @@ public class numw extends Number {
             case types.BIGDECIMAL:
                 return BigDecimal_value.byteValue();
             default:
-                return byte_value;
+                throw new RuntimeException("can't get type"+type.toString());
             }
     }
 

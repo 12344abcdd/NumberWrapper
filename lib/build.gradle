@@ -7,7 +7,8 @@
 
 plugins {
     // Apply the java-library plugin for API and implementation separation.
-    id 'java-library'
+    id 'java'
+    id 'application'
 }
 
 repositories {
@@ -17,15 +18,15 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
-    testImplementation libs.junit.jupiter
+    //testImplementation libs.junit.jupiter
 
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+        //testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api libs.commons.math3
+    //api libs.commons.math3
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation libs.guava
+    //implementation libs.guava
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -35,7 +36,12 @@ java {
     }
 }
 
+application {
+    // Define the main class for the application.
+    mainClass = 'me.abcdd.test'
+}
+/*
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
-}
+}*/
