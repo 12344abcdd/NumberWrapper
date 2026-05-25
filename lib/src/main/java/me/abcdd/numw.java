@@ -3,7 +3,7 @@ package me.abcdd;
 import java.math.*;
 
 public class numw extends Number {
-    private types type;
+    types type;
     byte byte_value;
     short short_value;
     int int_value;
@@ -14,6 +14,12 @@ public class numw extends Number {
     BigDecimal BigDecimal_value;
     
     public numw() {
+    type=types.NULL;
+    }
+    
+    
+    public numw(byte byte_value){
+        setValue(byte_value);
     }
     
     
@@ -23,8 +29,23 @@ public class numw extends Number {
     
     public void setType(types type){
         if(this.type!=type){
-        this.type=type;
-        
+            switch (type){
+                case types.BYTE:
+                    setValue(byteValue());
+                case types.SHORT:
+                    setValue(shortValue());
+                case types.INT:
+                    setValue(intValue());
+                case types.LONG:
+                    setValue(longValue());                 case types.FLOAT:
+                    setValue(floatValue());
+                case types.DOUBLE:
+                    setValue(doubleValue());
+                case types.BIGINTEGER:
+                    setValue(BigIntegerValue());
+                }
+            this.type=type;
+            
         }
     }
     
@@ -103,12 +124,12 @@ public class numw extends Number {
             case types.BIGDECIMAL:
                 return BigDecimal_value.toString();
             default:
-                throw new RuntimeException("can't get type"+type.toString());
+                throw new RuntimeException();
             }
     }
    
    
-    public byte byteValue() throws RuntimeException{
+    public byte byteValue() {
         switch (type){
             case types.BYTE:
                 return byte_value;
@@ -127,7 +148,7 @@ public class numw extends Number {
             case types.BIGDECIMAL:
                 return BigDecimal_value.byteValue();
             default:
-                throw new RuntimeException("can't get type"+type.toString());
+                throw new RuntimeException();
             }
     }
 
