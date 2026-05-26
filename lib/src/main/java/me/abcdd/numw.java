@@ -2,7 +2,7 @@ package me.abcdd;
 
 import java.math.*;
 
-public class numw extends Number {
+public class numw extends Number implements getable{
     types type;
     byte byte_value;
     short short_value;
@@ -22,7 +22,7 @@ public class numw extends Number {
         setValue(byte_value);
     }
     
-    
+    @Override
     public types getType(){
         return type;
     }
@@ -104,7 +104,7 @@ public class numw extends Number {
     
     
     //返回对应类型值
-    
+    @Override
     public String toString(){
         switch (type){
             case types.BYTE:
@@ -128,7 +128,7 @@ public class numw extends Number {
             }
     }
    
-   
+   @Override
     public byte byteValue() {
         switch (type){
             case types.BYTE:
@@ -152,7 +152,7 @@ public class numw extends Number {
             }
     }
 
-
+    @Override
     public short shortValue() {
         switch (type){
             case types.BYTE:
@@ -176,7 +176,7 @@ public class numw extends Number {
             }
     }
     
-    
+    @Override
     public int intValue(){
         switch (type){
             case types.BYTE:
@@ -200,7 +200,7 @@ public class numw extends Number {
             }
     }
 
-
+    @Override
     public long longValue(){
         switch (type){
             case types.BYTE:
@@ -224,7 +224,7 @@ public class numw extends Number {
             }
     }
 
-
+    @Override
     public float floatValue(){
         switch (type){
             case types.BYTE:
@@ -248,7 +248,7 @@ public class numw extends Number {
             }
     }
 
-
+    @Override
     public double doubleValue(){
         switch (type){
             case types.BYTE:
@@ -273,6 +273,7 @@ public class numw extends Number {
     }
     
     //big类，使用工厂方法
+    @Override
     public BigInteger BigIntegerValue(){
         switch (type){
             case types.BYTE:
@@ -296,7 +297,7 @@ public class numw extends Number {
             }
     }
     
-    
+    @Override
     public BigDecimal BigDecimalValue(){
         switch (type){
             case types.BYTE:
