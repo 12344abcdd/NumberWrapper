@@ -1,6 +1,6 @@
 package me.abcdd;
 
-public interface getable{
+public interface Getable{
     public me.abcdd.types getType();
     public java.lang.String toString();
   public byte byteValue();

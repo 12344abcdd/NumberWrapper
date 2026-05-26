@@ -2,7 +2,7 @@ package me.abcdd;
 
 import java.math.*;
 
-public class numw extends Number implements getable{
+public class numw extends Number implements Operations{
     types type;
     byte byte_value;
     short short_value;
