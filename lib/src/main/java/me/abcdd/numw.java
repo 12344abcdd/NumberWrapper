@@ -43,6 +43,8 @@ public class numw extends Number implements getable{
                     setValue(doubleValue());
                 case types.BIGINTEGER:
                     setValue(BigIntegerValue());
+                case BIGDECIMAL:
+                    setValue(BigDecimalValue());
                 }
             this.type=type;
             
