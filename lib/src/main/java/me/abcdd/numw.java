@@ -13,13 +13,42 @@ public class numw extends Number implements Operations{
     BigInteger BigInteger_value;
     BigDecimal BigDecimal_value;
     
+    
+    //对应类型的构造方法
     public numw() {
     type=types.NULL;
     }
     
-    
     public numw(byte byte_value){
         setValue(byte_value);
+    }
+    
+    public numw(short short_value){
+        setValue(short_value);
+    }
+    
+    public numw(int int_value){
+        setValue(int_value);
+    }
+    
+    public numw(long long_value){
+        setValue(long_value);
+    }
+    
+    public numw(float float_value){
+        setValue(float_value);
+    }
+    
+    public numw(double double_value){
+        setValue(double_value);
+    }
+    
+    public numw(BigInteger BigInteger_value){
+        setValue(BigInteger_value);
+    }
+    
+    public numw(BigDecimal BigDecimal_value){
+        setValue(BigDecimal_value);
     }
     
     @Override
@@ -27,24 +56,34 @@ public class numw extends Number implements Operations{
         return type;
     }
     
+    @Override
     public void setType(types type){
         if(this.type!=type){
             switch (type){
                 case types.BYTE:
                     setValue(byteValue());
+                    break;
                 case types.SHORT:
                     setValue(shortValue());
+                    break;
                 case types.INT:
                     setValue(intValue());
+                    break;
                 case types.LONG:
-                    setValue(longValue());                 case types.FLOAT:
+                    setValue(longValue());
+                    break;
+                case types.FLOAT:
                     setValue(floatValue());
+                    break;
                 case types.DOUBLE:
                     setValue(doubleValue());
+                    break;
                 case types.BIGINTEGER:
                     setValue(BigIntegerValue());
+                    break;
                 case BIGDECIMAL:
                     setValue(BigDecimalValue());
+                    break;
                 }
             this.type=type;
             
@@ -54,51 +93,49 @@ public class numw extends Number implements Operations{
     
     
     //设置对应类型值
-    
-    
-    
+    @Override
     public void setValue(byte byte_value){
         this.byte_value=byte_value;
         type=types.BYTE;
     }
     
-    
+    @Override
     public void setValue(short short_value){
         this.short_value=short_value;
         type=types.SHORT;
     }
     
-    
+    @Override
     public void setValue(int int_value){
         this.int_value=int_value;
         type=types.INT;
     }
     
-    
+    @Override
     public void setValue(long long_value){
         this.long_value=long_value;
         type=types.LONG;
     }
     
-    
+    @Override
     public void setValue(float float_value){
         this.float_value=float_value;
         type=types.FLOAT;
     }
     
-    
+    @Override
     public void setValue(double double_value){
         this.double_value=double_value;
         type=types.DOUBLE;
     }
     
-    
+    @Override
     public void setValue(BigInteger BigInteger_value){
         this.BigInteger_value=BigInteger_value;
         type=types.BIGINTEGER;
     }
     
-    
+    @Override
     public void setValue(BigDecimal BigDecimal_value){
         this.BigDecimal_value=BigDecimal_value;
         type=types.BIGDECIMAL;
@@ -174,7 +211,7 @@ public class numw extends Number implements Operations{
             case types.BIGDECIMAL:
                 return BigDecimal_value.shortValue();
             default:
-                return short_value;
+                throw new RuntimeException();
             }
     }
     
@@ -198,7 +235,7 @@ public class numw extends Number implements Operations{
             case types.BIGDECIMAL:
                 return BigDecimal_value.intValue();
             default:
-                return int_value;
+                throw new RuntimeException();
             }
     }
 
@@ -222,7 +259,7 @@ public class numw extends Number implements Operations{
             case types.BIGDECIMAL:
                 return BigDecimal_value.longValue();
             default:
-                return long_value;
+                throw new RuntimeException();
             }
     }
 
@@ -246,7 +283,7 @@ public class numw extends Number implements Operations{
             case types.BIGDECIMAL:
                 return BigDecimal_value.floatValue();
             default:
-                return float_value;
+                throw new RuntimeException();
             }
     }
 
@@ -270,7 +307,7 @@ public class numw extends Number implements Operations{
             case types.BIGDECIMAL:
                 return BigDecimal_value.doubleValue();
             default:
-                return double_value;
+                throw new RuntimeException();
             }
     }
     
@@ -295,7 +332,7 @@ public class numw extends Number implements Operations{
             case types.BIGDECIMAL:
                 return new BigInteger(BigDecimal_value.toString());
             default:
-                return BigInteger_value;
+                throw new RuntimeException();
             }
     }
     
@@ -319,7 +356,7 @@ public class numw extends Number implements Operations{
             case types.BIGDECIMAL:
                 return BigDecimal_value;
             default:
-                return BigDecimal_value;
+                throw new RuntimeException();
             }
     }   
 }
