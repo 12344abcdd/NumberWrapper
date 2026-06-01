@@ -54,6 +54,11 @@ public class numw extends Number implements Operations{
     
     @Override
     public numw add(numw numwObj){
+        /*if(type.ordinal()>=numwObj.getType().ordinal()){
+            numwObj.setType(types.cast(type,numwObj.getType()));
+            
+        }*/
+        
         throw new RuntimeException();
     }
         
