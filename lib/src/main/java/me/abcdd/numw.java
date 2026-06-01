@@ -16,7 +16,7 @@ public class numw extends Number implements Operations{
     
     //对应类型的构造方法
     public numw() {
-    type=types.NULL;
+    
     }
     
     public numw(byte byte_value){
@@ -49,6 +49,19 @@ public class numw extends Number implements Operations{
     
     public numw(BigDecimal BigDecimal_value){
         setValue(BigDecimal_value);
+    }
+    
+    
+    @Override
+    public numw add(numw numwObj){
+        throw new RuntimeException();
+    }
+        
+    @Override
+    public void selfadd(numw numwObj){
+        /*switch(type){
+            case types.Byte:
+                byte_value+=numw*/
     }
     
     @Override
