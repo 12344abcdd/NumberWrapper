@@ -55,25 +55,25 @@ public class numw extends Number implements Operations{
     public numw add(numw numwObj,types type){
         switch (type){
             case types.BYTE:
-                return new numw(byteValue()+numw.byteValue());
+                return new numw(byteValue()+numwObj.byteValue());
             case types.SHORT:
-                return Short.valueOf(short_value).toString();
+                return new numw(shortValue()+numwObj.shortValue());
             case types.INT:
-                return Integer.valueOf(int_value).toString();
+                return new numw(intValue()+numwObj.intValue());
             case types.LONG:
-                return Long.valueOf(long_value).toString();
+                return new numw(longValue()+numwObj.longValue());
             case types.FLOAT:
-                return Float.valueOf(float_value).toString();
+                return new numw(floatValue()+numwObj.floatValue());
             case types.DOUBLE:
-                return Double.valueOf(double_value).toString();
+                return new numw(doubleValue()+numwObj. doubleValue());
             case types.BIGINTEGER:
-                return BigInteger_value.toString();
+                return new numw(BigInteger_value.add(numwObj.BigIntegerValue()));
             case types.BIGDECIMAL:
-                return BigDecimal_value.toString();
+                return new numw(BigDecimal_value.add(numwObj.BigDecimalValue()));
             default:
                 throw new RuntimeException();
             }
-        //return new numw();
+    
     }
     
     @Override
