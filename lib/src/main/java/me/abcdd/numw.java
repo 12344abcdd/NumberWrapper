@@ -67,9 +67,9 @@ public class numw extends Number implements Operations{
             case types.DOUBLE:
                 return new numw(doubleValue()+numwObj. doubleValue());
             case types.BIGINTEGER:
-                return new numw(BigInteger_value.add(numwObj.BigIntegerValue()));
+                return new numw(BigIntegerValue().add(numwObj.BigIntegerValue()));
             case types.BIGDECIMAL:
-                return new numw(BigDecimal_value.add(numwObj.BigDecimalValue()));
+                return new numw(BigDecimalValue().add(numwObj.BigDecimalValue()));
             default:
                 throw new RuntimeException();
             }
