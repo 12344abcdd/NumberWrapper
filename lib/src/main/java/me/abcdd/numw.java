@@ -52,10 +52,10 @@ public class numw extends Number implements Operations{
     }
     
     
-    public numw add(numw numwObj,types type){/*
+    public numw add(numw numwObj,types type){
         switch (type){
             case types.BYTE:
-                return Byte.valueOf(byte_value).toString();
+                return new numw(byteValue()+numw.byteValue());
             case types.SHORT:
                 return Short.valueOf(short_value).toString();
             case types.INT:
@@ -72,8 +72,8 @@ public class numw extends Number implements Operations{
                 return BigDecimal_value.toString();
             default:
                 throw new RuntimeException();
-            }*/
-        return new numw();
+            }
+        //return new numw();
     }
     
     @Override
