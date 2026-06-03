@@ -52,29 +52,8 @@ public class numw extends Number implements Operations{
     }
     
     
-    public numw add(numw numwObj,types type){
-        switch (type){
-            case types.BYTE:
-                return new numw(byteValue()+numwObj.byteValue());
-            case types.SHORT:
-                return new numw(shortValue()+numwObj.shortValue());
-            case types.INT:
-                return new numw(intValue()+numwObj.intValue());
-            case types.LONG:
-                return new numw(longValue()+numwObj.longValue());
-            case types.FLOAT:
-                return new numw(floatValue()+numwObj.floatValue());
-            case types.DOUBLE:
-                return new numw(doubleValue()+numwObj. doubleValue());
-            case types.BIGINTEGER:
-                return new numw(BigIntegerValue().add(numwObj.BigIntegerValue()));
-            case types.BIGDECIMAL:
-                return new numw(BigDecimalValue().add(numwObj.BigDecimalValue()));
-            default:
-                throw new RuntimeException();
-            }
+ //   @Override
     
-    }
     
     @Override
     public numw add(numw numwObj){
