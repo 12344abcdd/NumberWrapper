@@ -1,0 +1,79 @@
+import me.abcdd.*;
+Calculate.add(new numw(1.0),new numw(1l),types.DOUBLE)
+Getable.getValue(new numw(1l))
+Getable.getValue(new numw(1.0))
+Getable.getValue(new numw(2147483648l))
+Getable.getValue(new numw(2147483648l)).longValue()+1l
+Getable.getValue(new numw(2147483648l)).longValue()+1
+(int)Getable.getValue(new numw(2147483648l)).longValue()
+test1(100000)
+test1(1000000)
+test1(10000000)
+test1(100000000)
+test1(100)
+test1(1000)
+test1(10)
+test1(10)
+test1(1000000)
+test1(100000000)
+test1(100000000)
+test1(10000000)
+test1(10000000)
+test1(10000000)
+test1(10000000)
+test1(10000000)
+test1(10000000)
+test1(10000000)
+test1(10000000)
+test1(10000000)
+test1(100000)
+test1(100000)
+test1(100000)
+test1(10000)
+test1(10000)
+test1(10000)
+test1(10000)
+test1(10000)
+test1(10000)
+test1(10000)
+test1(100000)
+test1(100000)
+test1(100000)
+test1(100000)
+test1(100000)
+test1(100000)
+test1(100000)
+test1(100000)
+public static long test1(int j){long s=0;
+    long t1 =new Date().getTime();
+    for(int i=0;i<j;i++){
+    s+=Getable.getValue(new numw(2147483648l)).longValue();
+    }
+    long t2 =new Date().getTime();
+    return t2 - t1;}
+test1(100000)
+test1(100000)
+test1(100000)
+test1(100000)
+test1(2147483647)
+test1(2147483647)
+test1(2147483647)
+test1(2147483647)
+test1(2147483647)
+test1(2147483647)
+public static long test2(int j){long s=0;
+    long t1 =new Date().getTime();
+    for(int i=0;i<j;i++){
+    s+=new numw(2147483648l).longValue();
+    }
+    long t2 =new Date().getTime();
+    return t2 - t1;}
+test2(2147483647)
+test2(2147483647)
+test2(2147483647)
+test2(2147483647)
+test2(2147483647)
+test2(2147483647)
+test1(2147483647)
+test1(2147483647)
+test2(2147483647)

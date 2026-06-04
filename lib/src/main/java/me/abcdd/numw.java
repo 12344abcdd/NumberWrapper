@@ -379,5 +379,8 @@ public class numw extends Number implements Operations{
             default:
                 throw new RuntimeException();
             }
-    }   
+    }
+    public byte byteValue2(){
+    return Getable.getValue(this).byteValue();
+    }
 }
