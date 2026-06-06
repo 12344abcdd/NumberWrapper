@@ -59,7 +59,8 @@ public class numw extends Number implements Operations{
     }
     
     public void selfadd(numw numwObj){
-        setValue((Number)Getable.getValue(Calculate.add(this,Getable.getValue(numwObj),types.cast(type,numwObj.type))));
+        types castedType=types.cast(type,numwObj.type);
+        setValue((Number)Getable.getValue(Calculate.add(this,numwObj,castedType)));
     }
     
     @Override
