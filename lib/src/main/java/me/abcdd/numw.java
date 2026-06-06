@@ -153,6 +153,11 @@ public class numw extends Number implements Operations{
         type=types.BIGDECIMAL;
     }
     
+    @Override
+    public void setValue(numw numwObj){
+        setValue(Getable.getValue(numwObj));
+    }
+    
     
     //返回对应类型值
     @Override

@@ -10,4 +10,5 @@ public interface Setable{
     public void setValue(double double_value);
     public void setValue(java.math.BigInteger BigInteger_value);
     public void setValue(java.math.BigDecimal BigDecimal_value);
+    public void setValue(numw numwObj);
 }
