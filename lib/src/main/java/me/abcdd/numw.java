@@ -188,148 +188,35 @@ public class numw extends Number implements Operations{
             }
     }
    
+   //使用Getable接口的静态方法，返回Number对象并调用返回对应值的方法
    @Override
-    public byte byteValue() {
-        switch (type){
-            case types.BYTE:
-                return byte_value;
-            case types.SHORT:
-                return (byte)short_value;
-            case types.INT:
-                return (byte)int_value;
-            case types.LONG:
-                return (byte)long_value;
-            case types.FLOAT:
-                return (byte)float_value;
-            case types.DOUBLE:
-                return (byte)double_value;
-            case types.BIGINTEGER:
-                return BigInteger_value.byteValue();
-            case types.BIGDECIMAL:
-                return BigDecimal_value.byteValue();
-            default:
-                throw new RuntimeException();
-            }
+    public byte byteValue(){
+        return Getable.getValue(this).byteValue();
     }
 
     @Override
-    public short shortValue() {
-        switch (type){
-            case types.BYTE:
-                return (short)byte_value;
-            case types.SHORT:
-                return short_value;
-            case types.INT:
-                return (short)int_value;
-            case types.LONG:
-                return (short)long_value;
-            case types.FLOAT:
-                return (short)float_value;
-            case types.DOUBLE:
-                return (short)double_value;
-            case types.BIGINTEGER:
-                return BigInteger_value.shortValue();
-            case types.BIGDECIMAL:
-                return BigDecimal_value.shortValue();
-            default:
-                throw new RuntimeException();
-            }
+    public short shortValue(){
+        return Getable.getValue(this).shortValue();
     }
     
     @Override
     public int intValue(){
-        switch (type){
-            case types.BYTE:
-                return (int)byte_value;
-            case types.SHORT:
-                return (int)short_value;
-            case types.INT:
-                return int_value;
-            case types.LONG:
-                return (int)long_value;
-            case types.FLOAT:
-                return (int)float_value;
-            case types.DOUBLE:
-                return (int)double_value;
-            case types.BIGINTEGER:
-                return BigInteger_value.intValue();
-            case types.BIGDECIMAL:
-                return BigDecimal_value.intValue();
-            default:
-                throw new RuntimeException();
-            }
+        return Getable.getValue(this).intValue();
     }
 
     @Override
     public long longValue(){
-        switch (type){
-            case types.BYTE:
-                return (long)byte_value;
-            case types.SHORT:
-                return (long)short_value;
-            case types.INT:
-                return (long)long_value;
-            case types.LONG:
-                return long_value;
-            case types.FLOAT:
-                return (long)float_value;
-            case types.DOUBLE:
-                return (long)double_value;
-            case types.BIGINTEGER:
-                return BigInteger_value.longValue();
-            case types.BIGDECIMAL:
-                return BigDecimal_value.longValue();
-            default:
-                throw new RuntimeException();
-            }
+        return Getable.getValue(this).longValue();
     }
 
     @Override
     public float floatValue(){
-        switch (type){
-            case types.BYTE:
-                return (float)byte_value;
-            case types.SHORT:
-                return (float)short_value;
-            case types.INT:
-                return (float)int_value;
-            case types.LONG:
-                return (float)long_value;
-            case types.FLOAT:
-                return float_value;
-            case types.DOUBLE:
-                return (float)double_value;
-            case types.BIGINTEGER:
-                return BigInteger_value.floatValue();
-            case types.BIGDECIMAL:
-                return BigDecimal_value.floatValue();
-            default:
-                throw new RuntimeException();
-            }
+        return Getable.getValue(this).floatValue();
     }
 
     @Override
     public double doubleValue(){
-        switch (type){
-            case types.BYTE:
-                return (double)byte_value;
-            case types.SHORT:
-                return (double)short_value;
-            case types.INT:
-                return (double)int_value;
-            case types.LONG:
-                return (double)long_value;
-            case types.FLOAT:
-                return double_value;
-            case types.DOUBLE:
-                return double_value;
-            case types.BIGINTEGER:
-                return BigInteger_value.doubleValue();
-            case types.BIGDECIMAL:
-                return BigDecimal_value.doubleValue();
-            default:
-                throw new RuntimeException();
-            }
+        return Getable.getValue(this).doubleValue();
     }
     
     //big类，使用工厂方法
@@ -380,7 +267,5 @@ public class numw extends Number implements Operations{
                 throw new RuntimeException();
             }
     }
-    public byte byteValue2(){
-    return Getable.getValue(this).byteValue();
-    }
+    
 }
