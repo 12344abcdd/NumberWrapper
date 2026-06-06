@@ -1,33 +1,33 @@
 package me.abcdd;
 
 import java.util.*;
+import java.math.*;
 
 public class test{
-    public static void testget(long times){
+    public static void testGetInt(long times){
         long j=0;
         int sum=0;
         Random r = new Random();
         long startTime=System.currentTimeMillis();
         for(;j<=times;j++){
             numw n=new numw(r.nextInt());
-            sum+=n.byteValue();
+            sum+=n.intValue();
             }
         long endTime=System.currentTimeMillis();
         System.out.println(endTime - startTime);
         System.out.println(sum);
         }
-        
-/*    public static void testget2(long times){
+        public static void testGetBigInt(long times){
         long j=0;
-        int sum=0;
+        BigInteger sum=BigInteger.ZERO;
         Random r = new Random();
         long startTime=System.currentTimeMillis();
         for(;j<=times;j++){
             numw n=new numw(r.nextInt());
-            sum+=n.byteValue2();
+            sum=sum.add(n.BigIntegerValue());
             }
         long endTime=System.currentTimeMillis();
         System.out.println(endTime - startTime);
         System.out.println(sum);
-        }*/
+        }
     }

@@ -52,24 +52,15 @@ public class numw extends Number implements Operations{
     }
     
     
- //   @Override
-    
     
     @Override
     public numw add(numw numwObj){
-        /*if(type.ordinal()>=numwObj.getType().ordinal()){
-            numwObj.setType(types.cast(type,numwObj.getType()));
-            
-        }*/
-        
-        throw new RuntimeException();
+        return Calculate.add(this,numwObj,types.cast(type,numwObj.getType()));
     }
         
     @Override
     public void selfadd(numw numwObj){
-        /*switch(type){
-            case types.Byte:
-                byte_value+=numw*/
+        //this=add(numwObj);
     }
     
     @Override
@@ -166,26 +157,7 @@ public class numw extends Number implements Operations{
     //返回对应类型值
     @Override
     public String toString(){
-        switch (type){
-            case types.BYTE:
-                return Byte.valueOf(byte_value).toString();
-            case types.SHORT:
-                return Short.valueOf(short_value).toString();
-            case types.INT:
-                return Integer.valueOf(int_value).toString();
-            case types.LONG:
-                return Long.valueOf(long_value).toString();
-            case types.FLOAT:
-                return Float.valueOf(float_value).toString();
-            case types.DOUBLE:
-                return Double.valueOf(double_value).toString();
-            case types.BIGINTEGER:
-                return BigInteger_value.toString();
-            case types.BIGDECIMAL:
-                return BigDecimal_value.toString();
-            default:
-                throw new RuntimeException();
-            }
+        return Getable.getValue(this).toString();
     }
    
    //使用Getable接口的静态方法，返回Number对象并调用返回对应值的方法
@@ -219,53 +191,14 @@ public class numw extends Number implements Operations{
         return Getable.getValue(this).doubleValue();
     }
     
-    //big类，使用工厂方法
+    //big类，工厂方法
     @Override
     public BigInteger BigIntegerValue(){
-        switch (type){
-            case types.BYTE:
-                return new BigInteger(Byte.valueOf(byte_value).toString());
-            case types.SHORT:
-                return new BigInteger(Short.valueOf(short_value).toString());
-            case types.INT:
-                return new BigInteger(Integer.valueOf(int_value).toString());
-            case types.LONG:
-                return new BigInteger(Long.valueOf(long_value).toString());
-            case types.FLOAT:
-                return new BigInteger(Float.valueOf(float_value).toString());
-            case types.DOUBLE:
-                return new BigInteger(Double.valueOf(double_value).toString());
-            case types.BIGINTEGER:
-                return BigInteger_value;
-            case types.BIGDECIMAL:
-                return new BigInteger(BigDecimal_value.toString());
-            default:
-                throw new RuntimeException();
-            }
+        return new BigInteger( Getable.getValue(this).toString());
     }
     
     @Override
     public BigDecimal BigDecimalValue(){
-        switch (type){
-            case types.BYTE:
-                return new BigDecimal(Byte.valueOf(byte_value).toString());
-            case types.SHORT:
-                return new BigDecimal(Short.valueOf(short_value).toString());
-            case types.INT:
-                return new BigDecimal(Integer.valueOf(int_value).toString());
-            case types.LONG:
-                return new BigDecimal(Long.valueOf(long_value).toString());
-            case types.FLOAT:
-                return new BigDecimal(Float.valueOf(float_value).toString());
-            case types.DOUBLE:
-                return new BigDecimal(Double.valueOf(double_value).toString());
-            case types.BIGINTEGER:
-                return new BigDecimal(BigInteger_value.toString());
-            case types.BIGDECIMAL:
-                return BigDecimal_value;
-            default:
-                throw new RuntimeException();
-            }
+        return new BigDecimal( Getable.getValue(this).toString());
     }
-    
 }
