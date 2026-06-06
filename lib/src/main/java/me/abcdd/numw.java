@@ -57,10 +57,9 @@ public class numw extends Number implements Operations{
     public numw add(numw numwObj){
         return Calculate.add(this,numwObj,types.cast(type,numwObj.getType()));
     }
-        
-    @Override
+    
     public void selfadd(numw numwObj){
-        //this=add(numwObj);
+        setValue((Number)Getable.getValue(Calculate.add(this,Getable.getValue(numwObj),types.cast(type,numwObj.type))));
     }
     
     @Override
@@ -154,9 +153,26 @@ public class numw extends Number implements Operations{
     }
     
     @Override
-    public void setValue(numw numwObj){
-        setValue(Getable.getValue(numwObj));
+    public void setValue(Number numObj){
+        if(numObj instanceof BigDecimal bd){
+            setValue(bd);
+        }else if(numObj instanceof BigInteger bi){
+            setValue(bi);
+        }else if(numObj instanceof Double d){
+            setValue(d);
+        }else if(numObj instanceof Float f){
+            setValue(f);
+        }else if(numObj instanceof Long l){
+            setValue(l);
+        }else if(numObj instanceof Integer i){
+            setValue(i);
+        }else if(numObj instanceof Short s){
+            setValue(s);
+        }else if(numObj instanceof Byte b){
+            setValue(b);
     }
+}
+    
     
     
     //返回对应类型值

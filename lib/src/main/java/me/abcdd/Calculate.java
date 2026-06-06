@@ -1,8 +1,6 @@
 package me.abcdd;
 
 public interface Calculate{
-
-    
     public static numw add(numw numwObj1,numw numwObj2,types type){
         switch (type){
             case types.BYTE:
@@ -26,6 +24,8 @@ public interface Calculate{
             }
     
     }
+    
+    
     public numw add(numw numwObj);
     public void selfadd(numw numwObj);
     /*
