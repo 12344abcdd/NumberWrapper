@@ -10,7 +10,7 @@ public class test{
         Random r = new Random();
         long startTime=System.currentTimeMillis();
         for(;j<=times;j++){
-            numw n=new numw(r.nextInt());
+            Numw n=new Numw(r.nextInt());
             sum+=n.intValue();
             }
         long endTime=System.currentTimeMillis();
@@ -23,7 +23,7 @@ public class test{
         Random r = new Random();
         long startTime=System.currentTimeMillis();
         for(;j<=times;j++){
-            numw n=new numw(r.nextInt());
+            Numw n=new Numw(r.nextInt());
             sum=sum.add(n.BigIntegerValue());
             }
         long endTime=System.currentTimeMillis();

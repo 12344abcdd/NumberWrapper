@@ -1,7 +1,7 @@
 package me.abcdd;
 
 public interface Setable{
-    public void setType(me.abcdd.types type);
+    public void setType(me.abcdd.Types type);
     public void setValue(byte byte_value);
     public void setValue(short short_value);
     public void setValue(int int_value);

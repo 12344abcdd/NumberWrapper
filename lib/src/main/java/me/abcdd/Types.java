@@ -1,9 +1,9 @@
 package me.abcdd;
 
-public enum types {
+public enum Types {
 BYTE,SHORT,INT,LONG,BIGINTEGER,FLOAT,DOUBLE,BIGDECIMAL;
     
-    public static types cast(types t1,types t2){
+    public static Types cast(Types t1,Types t2){
     if (t1.ordinal()>=t2.ordinal()){
         return t1;
         }

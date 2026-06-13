@@ -2,8 +2,8 @@ package me.abcdd;
 
 import java.math.*;
 
-public class numw extends Number implements Operations{
-    types type;
+public class Numw extends Number implements Operations{
+    Types type;
     byte byte_value;
     short short_value;
     int int_value;
@@ -15,82 +15,82 @@ public class numw extends Number implements Operations{
     
     
     //对应类型的构造方法
-    public numw() {
+    public Numw() {
     
     }
     
-    public numw(byte byte_value){
+    public Numw(byte byte_value){
         setValue(byte_value);
     }
     
-    public numw(short short_value){
+    public Numw(short short_value){
         setValue(short_value);
     }
     
-    public numw(int int_value){
+    public Numw(int int_value){
         setValue(int_value);
     }
     
-    public numw(long long_value){
+    public Numw(long long_value){
         setValue(long_value);
     }
     
-    public numw(float float_value){
+    public Numw(float float_value){
         setValue(float_value);
     }
     
-    public numw(double double_value){
+    public Numw(double double_value){
         setValue(double_value);
     }
     
-    public numw(BigInteger BigInteger_value){
+    public Numw(BigInteger BigInteger_value){
         setValue(BigInteger_value);
     }
     
-    public numw(BigDecimal BigDecimal_value){
+    public Numw(BigDecimal BigDecimal_value){
         setValue(BigDecimal_value);
     }
     
     
     
     @Override
-    public numw add(numw numwObj){
-        return Calculate.add(this,numwObj,types.cast(type,numwObj.getType()));
+    public Numw add(Numw numwObj){
+        return Calculate.add(this,numwObj,Types.cast(type,numwObj.getType()));
     }
     
-    public void selfadd(numw numwObj){
-        types castedType=types.cast(type,numwObj.type);
+    public void selfadd(Numw numwObj){
+        Types castedType=Types.cast(type,numwObj.type);
         setValue((Number)Getable.getValue(Calculate.add(this,numwObj,castedType)));
     }
     
     @Override
-    public types getType(){
+    public Types getType(){
         return type;
     }
     
     @Override
-    public void setType(types type){
+    public void setType(Types type){
         if(this.type!=type){
             switch (type){
-                case types.BYTE:
+                case Types.BYTE:
                     setValue(byteValue());
                     break;
-                case types.SHORT:
+                case Types.SHORT:
                     setValue(shortValue());
                     break;
-                case types.INT:
+                case Types.INT:
                     setValue(intValue());
                     break;
-                case types.LONG:
+                case Types.LONG:
                     setValue(longValue());
                     break;
-                case types.FLOAT:
+                case Types.FLOAT:
                     setValue(floatValue());
                     break;
-                case types.DOUBLE:
+                case Types.DOUBLE:
                     setValue(doubleValue());
                     break;
-                case types.BIGINTEGER:
+                case Types.BIGINTEGER:
                     setValue(BigIntegerValue());
                     break;
                 case BIGDECIMAL:
@@ -108,49 +108,49 @@ public class numw extends Number implements Operations{
     @Override
     public void setValue(byte byte_value){
         this.byte_value=byte_value;
-        type=types.BYTE;
+        type=Types.BYTE;
     }
     
     @Override
     public void setValue(short short_value){
         this.short_value=short_value;
-        type=types.SHORT;
+        type=Types.SHORT;
     }
     
     @Override
     public void setValue(int int_value){
         this.int_value=int_value;
-        type=types.INT;
+        type=Types.INT;
     }
     
     @Override
     public void setValue(long long_value){
         this.long_value=long_value;
-        type=types.LONG;
+        type=Types.LONG;
     }
     
     @Override
     public void setValue(float float_value){
         this.float_value=float_value;
-        type=types.FLOAT;
+        type=Types.FLOAT;
     }
     
     @Override
     public void setValue(double double_value){
         this.double_value=double_value;
-        type=types.DOUBLE;
+        type=Types.DOUBLE;
     }
     
     @Override
     public void setValue(BigInteger BigInteger_value){
         this.BigInteger_value=BigInteger_value;
-        type=types.BIGINTEGER;
+        type=Types.BIGINTEGER;
     }
     
     @Override
     public void setValue(BigDecimal BigDecimal_value){
         this.BigDecimal_value=BigDecimal_value;
-        type=types.BIGDECIMAL;
+        type=Types.BIGDECIMAL;
     }
     
     @Override

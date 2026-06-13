@@ -1,7 +1,7 @@
 package me.abcdd;
 
 public interface Getable{
-    public me.abcdd.types getType();
+    public me.abcdd.Types getType();
     public java.lang.String toString();
     public byte byteValue();
     public short shortValue();
@@ -13,24 +13,24 @@ public interface Getable{
     public java.math.BigDecimal BigDecimalValue();
   
     @SuppressWarnings("unchecked")
-    public static <T extends Number> T getValue(numw numwObj) {
+    public static <T extends Number> T getValue(Numw numwObj) {
         switch (numwObj.type){
-            case types.BYTE:
+            case Types.BYTE:
                 return (T) Byte.valueOf(numwObj.byte_value);
-            case types.SHORT:
+            case Types.SHORT:
                 return (T) Short.valueOf(numwObj.short_value);
-            case types.INT:
+            case Types.INT:
                 return (T) Integer.valueOf(numwObj.int_value);
-            case types.LONG:
+            case Types.LONG:
                 return (T) Long.valueOf(numwObj.long_value);
-            case types.FLOAT:
+            case Types.FLOAT:
                 return (T) Float.valueOf(numwObj.float_value);
-            case types.DOUBLE:
+            case Types.DOUBLE:
                 return (T) Double.valueOf(numwObj.double_value);
-            case types.BIGINTEGER:
+            case Types.BIGINTEGER:
             // BigInteger → Number子类，直接强转
                 return (T) numwObj.BigInteger_value;
-            case types.BIGDECIMAL:
+            case Types.BIGDECIMAL:
                 return (T) numwObj.BigDecimal_value;
             default:
                 throw new RuntimeException();
