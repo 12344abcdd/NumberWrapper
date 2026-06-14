@@ -13,7 +13,7 @@ public interface Getable{
     public java.math.BigDecimal BigDecimalValue();
   
     @SuppressWarnings("unchecked")
-    public static <T extends Number> T getValue(Numw numwObj) {
+    public static <T extends Number> T getValue(numW numwObj) {
         switch (numwObj.type){
             case Types.BYTE:
                 return (T) Byte.valueOf(numwObj.byte_value);

@@ -1,24 +1,24 @@
 package me.abcdd;
 
 public interface Calculate{
-    public static Numw add(Numw numwObj1,Numw numwObj2,Types type){
+    public static numW add(numW numwObj1,numW numwObj2,Types type){
         switch (type){
             case Types.BYTE:
-                return new Numw(numwObj1.byteValue()+numwObj2.byteValue());
+                return new numW(numwObj1.byteValue()+numwObj2.byteValue());
             case Types.SHORT:
-                return new Numw(numwObj1.shortValue()+numwObj2.shortValue());
+                return new numW(numwObj1.shortValue()+numwObj2.shortValue());
             case Types.INT:
-                return new Numw(numwObj1.intValue()+numwObj2.intValue());
+                return new numW(numwObj1.intValue()+numwObj2.intValue());
             case Types.LONG:
-                return new Numw(numwObj1.longValue()+numwObj2.longValue());
+                return new numW(numwObj1.longValue()+numwObj2.longValue());
             case Types.FLOAT:
-                return new Numw(numwObj1.floatValue()+numwObj2.floatValue());
+                return new numW(numwObj1.floatValue()+numwObj2.floatValue());
             case Types.DOUBLE:
-                return new Numw(numwObj1.doubleValue()+numwObj2.doubleValue());
+                return new numW(numwObj1.doubleValue()+numwObj2.doubleValue());
             case Types.BIGINTEGER:
-                return new Numw(numwObj1.BigIntegerValue().add(numwObj2.BigIntegerValue()));
+                return new numW(numwObj1.BigIntegerValue().add(numwObj2.BigIntegerValue()));
             case Types.BIGDECIMAL:
-                return new Numw(numwObj1.BigDecimalValue().add(numwObj2.BigDecimalValue()));
+                return new numW(numwObj1.BigDecimalValue().add(numwObj2.BigDecimalValue()));
             default:
                 throw new RuntimeException();
             }
@@ -26,14 +26,14 @@ public interface Calculate{
     }
     
     
-    public Numw add(Numw numwObj);
-    public void selfadd(Numw numwObj);
+    public numW add(numW numwObj);
+    public void selfadd(numW numwObj);
     /*
-    public Numw subtract(Numw numwObj);
-    public void selfsubtract(Numw numwObj);
+    public numW subtract(numW numwObj);
+    public void selfsubtract(numW numwObj);
     
-    public Numw multiply(Numw numwObj);
-    public void selfmultiply(Numw numwObj);*/
+    public numW multiply(numW numwObj);
+    public void selfmultiply(numW numwObj);*/
     
     
     }

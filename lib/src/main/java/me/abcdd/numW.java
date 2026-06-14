@@ -2,7 +2,7 @@ package me.abcdd;
 
 import java.math.*;
 
-public class Numw extends Number implements Operations{
+public class numW extends Number implements Operations{
     Types type;
     byte byte_value;
     short short_value;
@@ -15,50 +15,50 @@ public class Numw extends Number implements Operations{
     
     
     //对应类型的构造方法
-    public Numw() {
+    public numW() {
     
     }
     
-    public Numw(byte byte_value){
+    public numW(byte byte_value){
         setValue(byte_value);
     }
     
-    public Numw(short short_value){
+    public numW(short short_value){
         setValue(short_value);
     }
     
-    public Numw(int int_value){
+    public numW(int int_value){
         setValue(int_value);
     }
     
-    public Numw(long long_value){
+    public numW(long long_value){
         setValue(long_value);
     }
     
-    public Numw(float float_value){
+    public numW(float float_value){
         setValue(float_value);
     }
     
-    public Numw(double double_value){
+    public numW(double double_value){
         setValue(double_value);
     }
     
-    public Numw(BigInteger BigInteger_value){
+    public numW(BigInteger BigInteger_value){
         setValue(BigInteger_value);
     }
     
-    public Numw(BigDecimal BigDecimal_value){
+    public numW(BigDecimal BigDecimal_value){
         setValue(BigDecimal_value);
     }
     
     
     
     @Override
-    public Numw add(Numw numwObj){
+    public numW add(numW numwObj){
         return Calculate.add(this,numwObj,Types.cast(type,numwObj.getType()));
     }
     
-    public void selfadd(Numw numwObj){
+    public void selfadd(numW numwObj){
         Types castedType=Types.cast(type,numwObj.type);
         setValue((Number)Getable.getValue(Calculate.add(this,numwObj,castedType)));
     }
