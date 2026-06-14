@@ -3,7 +3,7 @@ package me.abcdd;
 public enum Types {
 BYTE,SHORT,INT,LONG,BIGINTEGER,FLOAT,DOUBLE,BIGDECIMAL;
     
-    public static types cast(types t1, types t2) {
+    public static Types cast(Types t1, Types t2) {
     // 任意一方是BigDecimal → BigDecimal
     if(t1==BIGDECIMAL || t2==BIGDECIMAL) return BIGDECIMAL;
     // 任意一方是Double → Double
